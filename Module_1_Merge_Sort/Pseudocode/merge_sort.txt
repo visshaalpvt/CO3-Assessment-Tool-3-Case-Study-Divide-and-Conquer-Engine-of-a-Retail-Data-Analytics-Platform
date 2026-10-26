@@ -1,0 +1,17 @@
+MERGE_SORT(A, left, right)
+    if left >= right: return
+    mid = floor((left + right) / 2)
+    MERGE_SORT(A, left, mid)
+    MERGE_SORT(A, mid + 1, right)
+    MERGE(A, left, mid, right)
+
+MERGE(A, left, mid, right)
+    copy A[left..mid] to L and A[mid+1..right] to R
+    i = 0; j = 0; k = left
+    while i < length(L) and j < length(R)
+        if key(L[i]) <= key(R[j])     // <= preserves stability
+            A[k] = L[i]; i = i + 1
+        else
+            A[k] = R[j]; j = j + 1
+        k = k + 1
+    copy remaining items from L, then R, into A

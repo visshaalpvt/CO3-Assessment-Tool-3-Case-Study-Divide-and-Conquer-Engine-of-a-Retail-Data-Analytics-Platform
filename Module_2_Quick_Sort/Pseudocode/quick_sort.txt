@@ -1,0 +1,17 @@
+QUICK_SORT(A, low, high)
+    if low < high
+        p = PARTITION_RANDOMIZED(A, low, high)
+        QUICK_SORT(A, low, p - 1)
+        QUICK_SORT(A, p + 1, high)
+
+PARTITION_RANDOMIZED(A, low, high)
+    choose random index r in [low, high]
+    swap A[r] with A[high]
+    pivot = A[high]
+    i = low
+    for j from low to high - 1
+        if A[j] <= pivot
+            swap A[i], A[j]
+            i = i + 1
+    swap A[i], A[high]
+    return i

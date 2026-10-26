@@ -1,0 +1,10 @@
+BINARY_SEARCH_FIRST(A, target)
+    low = 0; high = length(A) - 1; answer = -1
+    while low <= high
+        mid = low + floor((high - low) / 2)
+        if A[mid].timestamp >= target
+            if A[mid].timestamp == target: answer = mid
+            high = mid - 1
+        else
+            low = mid + 1
+    return answer  // -1 means not found

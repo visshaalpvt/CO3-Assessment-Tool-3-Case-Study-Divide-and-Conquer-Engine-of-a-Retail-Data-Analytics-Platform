@@ -1,0 +1,5 @@
+PASS: stable merge sort
+PASS: randomized quick sort
+PASS: first-occurrence binary search
+PASS: Strassen agrees with conventional multiplication
+All 4 module test groups passed.

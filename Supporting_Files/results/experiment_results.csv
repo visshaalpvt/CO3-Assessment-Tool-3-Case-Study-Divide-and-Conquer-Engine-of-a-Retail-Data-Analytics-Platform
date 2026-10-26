@@ -1,0 +1,9 @@
+experiment,n,seconds,verified
+merge_sort,1000,0.003254,True
+quick_sort,1000,0.002441,True
+merge_sort,2000,0.006691,True
+quick_sort,2000,0.004542,True
+merge_sort,4000,0.014721,True
+quick_sort,4000,0.0106,True
+merge_sort,8000,0.033009,True
+quick_sort,8000,0.028353,True
